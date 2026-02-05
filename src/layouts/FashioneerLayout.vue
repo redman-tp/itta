@@ -37,14 +37,22 @@ const notificationsStore = useNotificationsStore();
 const unreadCount = computed(() => notificationsStore.unreadCount);
 
 const navItems = [
-  { label: 'Home', icon: 'home', to: '/fashioneer' },
+  { label: 'Home', icon: 'home', to: '/' },
   { label: 'Requests', icon: 'inbox', to: '/fashioneer/requests' },
   { label: 'Jobs', icon: 'construction', to: '/fashioneer/jobs' },
   { label: 'Listings', icon: 'storefront', to: '/fashioneer/listings' },
   { label: 'Profile', icon: 'person', to: '/fashioneer/profile' },
 ];
 
-const showBack = computed(() => route.path !== '/fashioneer');
+const primaryRoutes = [
+  '/fashioneer',
+  '/fashioneer/requests',
+  '/fashioneer/jobs',
+  '/fashioneer/listings',
+  '/fashioneer/profile',
+];
+
+const showBack = computed(() => !primaryRoutes.includes(route.path));
 
 function handleBack() {
   if (route.path === '/fashioneer') return;

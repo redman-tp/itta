@@ -8,6 +8,8 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: '', component: () => import('pages/LandingPage.vue') },
       { path: 'auth', component: () => import('pages/AuthPage.vue') },
+      { path: 'auth/login', component: () => import('pages/AuthPage.vue') },
+      { path: 'auth/register', component: () => import('pages/AuthPage.vue') },
       { path: 'marketplace', component: () => import('pages/MarketplacePage.vue') },
       { path: 'fabrics', component: () => import('pages/FabricMarketPage.vue') },
       {

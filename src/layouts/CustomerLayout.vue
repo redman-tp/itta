@@ -22,14 +22,22 @@ const route = useRoute();
 const router = useRouter();
 
 const navItems = [
-  { label: 'Home', icon: 'home', to: '/customer' },
+  { label: 'Home', icon: 'home', to: '/' },
   { label: 'Sew', icon: 'checkroom', to: '/customer/sew-request' },
   { label: 'Requests', icon: 'list_alt', to: '/customer/requests' },
   { label: 'Jobs', icon: 'work', to: '/customer/jobs' },
   { label: 'Profile', icon: 'person', to: '/customer/profile' },
 ];
 
-const showBack = computed(() => route.path !== '/customer');
+const primaryRoutes = [
+  '/customer',
+  '/customer/sew-request',
+  '/customer/requests',
+  '/customer/jobs',
+  '/customer/profile',
+];
+
+const showBack = computed(() => !primaryRoutes.includes(route.path));
 
 function handleBack() {
   if (route.path === '/customer') return;
