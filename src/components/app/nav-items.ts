@@ -9,7 +9,7 @@ export const publicNavItems: NavItem[] = [
   { label: 'Designs', icon: 'dashboard', to: '/marketplace' },
   { label: 'Fabrics', icon: 'store', to: '/fabrics' },
   { label: 'Requests', icon: 'list_alt', to: '/customer/requests' },
-  { label: 'Profile', icon: 'person', to: '/customer/profile' },
+  { label: 'You', icon: 'person', to: '/customer/profile' },
 ];
 
 export const customerNavItems: NavItem[] = [
@@ -17,7 +17,7 @@ export const customerNavItems: NavItem[] = [
   { label: 'Sew', icon: 'checkroom', to: '/customer/sew-request' },
   { label: 'Requests', icon: 'list_alt', to: '/customer/requests' },
   { label: 'Jobs', icon: 'work', to: '/customer/jobs' },
-  { label: 'Profile', icon: 'person', to: '/customer/profile' },
+  { label: 'You', icon: 'person', to: '/customer/profile' },
 ];
 
 export const fashioneerNavItems: NavItem[] = [
@@ -25,5 +25,5 @@ export const fashioneerNavItems: NavItem[] = [
   { label: 'Requests', icon: 'inbox', to: '/fashioneer/requests' },
   { label: 'Jobs', icon: 'construction', to: '/fashioneer/jobs' },
   { label: 'Listings', icon: 'storefront', to: '/fashioneer/listings' },
-  { label: 'Profile', icon: 'person', to: '/fashioneer/profile' },
+  { label: 'You', icon: 'person', to: '/fashioneer/profile' },
 ];

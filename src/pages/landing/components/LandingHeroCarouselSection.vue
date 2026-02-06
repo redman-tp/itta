@@ -5,6 +5,12 @@
       swipeable
       animated
       infinite
+      navigation
+      navigation-position="bottom"
+      navigation-icon="fiber_manual_record"
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      :autoplay="5000"
       height="220px"
       class="itta-hero-carousel"
     >

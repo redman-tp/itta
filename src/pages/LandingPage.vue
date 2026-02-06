@@ -1,5 +1,5 @@
 <template>
-  <q-page class="itta-page">
+  <q-page class="itta-page itta-landing-page">
     <LandingTopNavSection />
     <LandingHeroCarouselSection />
     <LandingSplitBannerSection />

@@ -4,27 +4,32 @@
       <div class="text-subtitle1 text-weight-medium">Trending designs</div>
       <BaseButton type="text" label="Browse all designs" to="/marketplace" />
     </div>
-    <div class="row no-wrap scroll q-gutter-sm q-mt-sm itta-rail">
-      <BaseCard
-        v-for="design in designs"
-        :key="design.id"
-        :media="design.imageUrl"
-        media-height="140px"
-        ui-key="card:trending-design"
-        class="itta-rail-card"
-        :clickable="true"
-        @click="goToDetail(design.id)"
-      >
-        <div class="row items-center q-gutter-xs">
-          <TagPill type="info" :label="tags[design.id] ?? 'Trending'" />
-        </div>
-        <div class="text-body2 text-weight-medium q-mt-xs">{{ design.title }}</div>
-        <div class="text-caption text-grey-7">by {{ design.designerName ?? 'Itta Studio' }}</div>
-        <BaseButton class="q-mt-sm" type="ghost" label="Request" to="/auth" />
-      </BaseCard>
-      <BaseCard title="Browse all designs" ui-key="card:browse-designs" class="itta-rail-card">
-        <BaseButton type="text" label="Explore" to="/marketplace" />
-      </BaseCard>
+    <div class="itta-rail-wrap">
+      <div class="row no-wrap scroll q-gutter-sm q-mt-sm itta-rail">
+        <BaseCard
+          v-for="design in designs"
+          :key="design.id"
+          :media="design.imageUrl"
+          media-height="140px"
+          ui-key="card:trending-design"
+          class="itta-rail-card"
+          :clickable="true"
+          @click="goToDetail(design.id)"
+        >
+          <div class="row items-center q-gutter-xs">
+            <TagPill type="info" :label="tags[design.id] ?? 'Trending'" />
+          </div>
+          <div class="text-body2 text-weight-medium q-mt-xs">{{ design.title }}</div>
+          <div class="text-caption text-grey-7">by {{ design.designerName ?? 'Itta Studio' }}</div>
+          <BaseButton class="q-mt-sm" type="ghost" label="Request" to="/auth" />
+        </BaseCard>
+        <BaseCard title="Browse all designs" ui-key="card:browse-designs" class="itta-rail-card">
+          <BaseButton type="text" label="Explore" to="/marketplace" />
+        </BaseCard>
+      </div>
+      <div class="itta-rail-arrow">
+        <q-icon name="chevron_right" />
+      </div>
     </div>
   </section>
 </template>

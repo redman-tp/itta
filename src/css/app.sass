@@ -6,6 +6,60 @@
 .itta-section
   margin-bottom: 20px
 
+.itta-landing-page
+  background: #f1f2f4
+  padding: 0 0 2px
+
+.itta-landing-page .itta-section
+  background: #ffffff
+  border-radius: 0
+  padding: 12px 14px
+  margin: 2px 0
+
+.itta-landing-page .itta-section:first-child
+  margin-top: 0
+
+.itta-landing-page .itta-topnav
+  margin-bottom: 0
+  padding-right: 10px
+  padding-left: 10px
+
+.itta-landing-page .itta-topnav + .itta-section
+  margin-top: 0
+
+.itta-topnav__search .q-field__control
+  border-radius: 999px
+  padding-right: 6px
+
+.itta-topnav__search .q-field__control:before,
+.itta-topnav__search .q-field__control:after
+  border-radius: 999px
+
+.itta-search-btn
+  border-radius: 999px
+  padding: 4px 12px
+
+.itta-brand
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 30px
+  overflow: hidden
+  align-items: center
+
+.itta-brand__logo
+  width: 30%
+  max-width: 300px
+
+.itta-brand__logo .q-img__image
+  object-fit: contain
+
+.itta-landing-page .itta-section.itta-hero
+  background: linear-gradient(135deg, #f5f7ff, #fdf3f6)
+
+.itta-landing-page .itta-section.itta-cta
+  background: #f8f9fc
+
 .itta-hero
   padding: 20px
   border-radius: 16px
@@ -28,6 +82,14 @@
   overflow: hidden
   background: #ffffff
 
+.itta-hero-carousel .q-carousel__navigation .q-btn
+  min-width: 12px
+  min-height: 12px
+  padding: 2px
+
+.itta-hero-carousel .q-carousel__navigation .q-btn__content
+  font-size: 8px
+
 .itta-hero-image
   border-radius: 12px
 
@@ -42,6 +104,30 @@
 
 .itta-rail
   overflow-x: auto
+  scrollbar-width: none
+  -ms-overflow-style: none
+  padding-right: 28px
+
+.itta-rail::-webkit-scrollbar
+  display: none
+
+.itta-rail-wrap
+  position: relative
+
+.itta-rail-arrow
+  position: absolute
+  right: 6px
+  top: 50%
+  transform: translateY(-50%)
+  width: 24px
+  height: 24px
+  border-radius: 999px
+  background: rgba(0, 0, 0, 0.04)
+  color: #2b3a5c
+  display: flex
+  align-items: center
+  justify-content: center
+  pointer-events: none
 
 .itta-rail-card
   min-width: 180px
@@ -54,7 +140,8 @@
 
 .itta-card
   border-radius: 16px
-  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08)
+  border: 1px solid #eef0f5
+  box-shadow: none
 
 .itta-card__media
   border-top-left-radius: 16px
