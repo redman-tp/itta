@@ -1,13 +1,15 @@
 <template>
   <q-page class="itta-page">
-    <CustomerOverviewSection />
-    <CustomerQuickActionsSection />
-    <CustomerActivitySection />
+    <CustomerDashboardJobsSection />
+    <CustomerDashboardRequestsSection class="q-mt-sm" />
+    <CustomerDashboardBidsSection class="q-mt-sm" />
+    <CustomerDashboardActivitySection class="q-mt-sm" />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import CustomerOverviewSection from 'src/pages/customer/components/CustomerOverviewSection.vue';
-import CustomerQuickActionsSection from 'src/pages/customer/components/CustomerQuickActionsSection.vue';
-import CustomerActivitySection from 'src/pages/customer/components/CustomerActivitySection.vue';
+import CustomerDashboardJobsSection from 'src/pages/customer/components/CustomerDashboardJobsSection.vue';
+import CustomerDashboardRequestsSection from 'src/pages/customer/components/CustomerDashboardRequestsSection.vue';
+import CustomerDashboardBidsSection from 'src/pages/customer/components/CustomerDashboardBidsSection.vue';
+import CustomerDashboardActivitySection from 'src/pages/customer/components/CustomerDashboardActivitySection.vue';
 </script>
