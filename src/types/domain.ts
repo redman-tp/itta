@@ -23,6 +23,7 @@ export interface CustomerProfile extends UserProfile {
 export interface FashioneerProfile extends UserProfile {
   specialties?: string[];
   serviceInfo?: string;
+  verified?: boolean;
 }
 
 export interface MeasurementRecord {
@@ -49,6 +50,7 @@ export interface DesignItem {
   description?: string;
   images?: string[];
   isBookmarked?: boolean;
+  designerName?: string;
 }
 
 export interface SewRequest {
