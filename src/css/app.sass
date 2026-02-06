@@ -79,16 +79,36 @@
 
 .itta-hero-carousel
   border-radius: 16px
-  overflow: hidden
+  overflow: visible
   background: #ffffff
+  padding-bottom: 14px
+  position: relative
+
+.itta-hero-carousel .q-carousel__slides-container
+  border-radius: 16px
+  overflow: hidden
+
+.itta-hero-carousel .q-carousel__navigation
+  bottom: -6px
 
 .itta-hero-carousel .q-carousel__navigation .q-btn
-  min-width: 12px
-  min-height: 12px
-  padding: 2px
+  min-width: 10px
+  min-height: 10px
+  padding: 1px
 
 .itta-hero-carousel .q-carousel__navigation .q-btn__content
-  font-size: 8px
+  font-size: 6px
+
+.itta-hero-slide
+  height: 100%
+  box-sizing: border-box
+  padding-bottom: 0
+
+.itta-hero-carousel .q-carousel__navigation-icon
+  color: #cbd2dc
+
+.itta-hero-carousel .q-carousel__navigation-icon--active
+  color: #0b1b3a
 
 .itta-hero-image
   border-radius: 12px
@@ -119,15 +139,16 @@
   right: 6px
   top: 50%
   transform: translateY(-50%)
-  width: 24px
-  height: 24px
+  width: 28px
+  height: 28px
   border-radius: 999px
-  background: rgba(0, 0, 0, 0.04)
-  color: #2b3a5c
+  background: #0b1b3a
+  color: #ffffff
   display: flex
   align-items: center
   justify-content: center
   pointer-events: none
+  box-shadow: 0 4px 12px rgba(11, 27, 58, 0.18)
 
 .itta-rail-card
   min-width: 180px

@@ -15,7 +15,7 @@
       class="itta-hero-carousel"
     >
       <q-carousel-slide v-for="item in slides" :key="item.title" :name="item.name">
-        <div class="row items-center q-col-gutter-sm">
+        <div class="itta-hero-slide row items-center q-col-gutter-sm">
           <div class="col-6">
             <div class="text-subtitle1 text-weight-medium">{{ item.title }}</div>
             <div class="text-caption text-grey-7 q-mt-xs">{{ item.subtitle }}</div>
