@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia';
-import type { CustomerProfile, FashioneerProfile } from 'src/types/domain';
-import { mockCustomerProfile, mockFashioneerProfile } from 'src/data/mock-data';
+import type { CustomerProfile, FashioneerProfile, UserProfile } from 'src/types/domain';
 import { profileApi } from 'src/services/api/profileApi';
 
 interface ProfileState {
@@ -10,8 +9,8 @@ interface ProfileState {
 
 export const useProfileStore = defineStore('profile', {
   state: (): ProfileState => ({
-    customerProfile: mockCustomerProfile,
-    fashioneerProfile: mockFashioneerProfile,
+    customerProfile: null,
+    fashioneerProfile: null,
   }),
   actions: {
     setCustomerProfile(profile: CustomerProfile) {
@@ -19,6 +18,22 @@ export const useProfileStore = defineStore('profile', {
     },
     setFashioneerProfile(profile: FashioneerProfile) {
       this.fashioneerProfile = profile;
+    },
+    ensureCustomerProfile(user: UserProfile | null) {
+      if (this.customerProfile || !user) return;
+      this.customerProfile = {
+        id: user.id,
+        name: user.name,
+        location: user.location ?? '',
+      };
+    },
+    ensureFashioneerProfile(user: UserProfile | null) {
+      if (this.fashioneerProfile || !user) return;
+      this.fashioneerProfile = {
+        id: user.id,
+        name: user.name,
+        location: user.location ?? '',
+      };
     },
     async fetchCustomerProfile() {
       // TODO: replace mock with backend response

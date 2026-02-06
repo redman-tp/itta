@@ -37,6 +37,7 @@ export default defineRouter(function (/* { store, ssrContext } */) {
 
   Router.beforeEach((to) => {
     const authStore = useAuthStore();
+    authStore.initialize();
     const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
     const requiredRole = to.matched.find((record) => record.meta.role)?.meta
       .role as UserRole | undefined;
@@ -46,7 +47,10 @@ export default defineRouter(function (/* { store, ssrContext } */) {
     }
 
     if (requiresAuth && !authStore.canAccess(requiredRole)) {
-      return '/auth';
+      if (authStore.isAuthenticated) {
+        return authStore.getDashboardRoute();
+      }
+      return { path: '/auth/login', query: { redirect: to.fullPath } };
     }
 
     return true;
