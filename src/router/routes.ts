@@ -24,13 +24,14 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/CustomerLayout.vue'),
     meta: { requiresAuth: true, role: 'customer' },
     children: [
-      {
-        path: '',
-        component: () => import('pages/customer/CustomerDashboardPage.vue'),
-      },
+      { path: '', redirect: 'profile' },
       {
         path: 'profile',
         component: () => import('pages/customer/profile/CustomerProfilePage.vue'),
+      },
+      {
+        path: 'profile/dashboard',
+        component: () => import('pages/customer/CustomerDashboardPage.vue'),
       },
       {
         path: 'measurements',
@@ -74,6 +75,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'profile',
         component: () => import('pages/fashioneer/profile/FashioneerProfilePage.vue'),
+      },
+      {
+        path: 'profile/dashboard',
+        component: () => import('pages/fashioneer/FashioneerDashboardPage.vue'),
       },
       {
         path: 'requests',
