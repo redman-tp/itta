@@ -40,6 +40,7 @@ export interface DesignItem {
   title: string;
   price: number;
   imageUrl?: string;
+  imageRatio?: string | number;
   rating?: number;
   sewedCount?: number;
   audience?: 'men' | 'women' | 'kids' | 'unisex';
@@ -105,6 +106,7 @@ export interface FabricItem {
   pricePerUnit?: number;
   tags?: string[];
   description?: string;
+  isBookmarked?: boolean;
 }
 
 export interface Bid {
