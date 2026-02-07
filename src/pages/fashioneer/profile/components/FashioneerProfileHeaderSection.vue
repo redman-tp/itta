@@ -12,15 +12,11 @@
       </div>
       <q-btn flat dense round icon="settings" @click="openSettings" />
     </div>
-    <div class="row q-gutter-sm q-mt-sm">
-      <BaseButton type="ghost" label="Edit profile" @click="openSettings" />
-    </div>
   </BaseCard>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import BaseButton from 'components/base/BaseButton.vue';
 import BaseCard from 'components/base/BaseCard.vue';
 import { useAuthStore } from 'src/stores/auth-store';
 import { useProfileStore } from 'src/stores/profile-store';
