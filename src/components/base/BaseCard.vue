@@ -3,7 +3,7 @@
     :flat="flat"
     :bordered="bordered"
     class="itta-card"
-    :class="{ 'itta-card--clickable': clickable }"
+    :class="{ 'itta-card--clickable': clickable, 'itta-card--flat': flat }"
     :data-ui="dataUi"
     @click="handleClick"
   >
