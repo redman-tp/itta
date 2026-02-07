@@ -1,8 +1,8 @@
 <template>
-  <section class="itta-section">
+  <section class="itta-section itta-section--tight">
     <div class="text-subtitle1 text-weight-medium">Featured designs</div>
-    <div class="row q-col-gutter-md q-mt-sm">
-      <div v-for="design in featured" :key="design.id" class="col-12 col-sm-6">
+    <div class="marketplace-masonry q-mt-sm itta-product-grid">
+      <div v-for="design in featured" :key="design.id" class="marketplace-item">
         <DesignCard :design="design" @action="goToDetail" />
       </div>
     </div>

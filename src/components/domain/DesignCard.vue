@@ -3,7 +3,7 @@
     :title="design.title"
     :subtitle="design.location"
     :media="design.imageUrl"
-    media-height="160px"
+    :media-ratio="design.imageRatio ?? '4/5'"
     :button="showAction"
     :button-label="buttonLabel"
     :button-type="buttonType"
@@ -28,7 +28,7 @@
       flat
       dense
       round
-      icon="bookmark"
+      :icon="design.isBookmarked ? 'favorite' : 'favorite_border'"
       class="itta-design-card__bookmark"
       :color="design.isBookmarked ? 'primary' : 'grey-6'"
       @click.stop="toggleBookmark"

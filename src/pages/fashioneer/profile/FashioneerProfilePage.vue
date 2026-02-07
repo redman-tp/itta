@@ -5,6 +5,7 @@
     <FashioneerProfileActionsSection class="q-mt-sm" />
     <FashioneerProfileMeasurementsSection class="q-mt-sm" />
     <FashioneerProfilePortfolioSection class="q-mt-sm" />
+    <FashioneerProfileDiscoverSection class="q-mt-sm" />
     <q-drawer v-model="showSettings" side="right" overlay>
       <div class="q-pa-md">
         <div class="text-subtitle1 text-weight-medium">Settings</div>
@@ -21,6 +22,7 @@ import FashioneerProfileStatsSection from 'src/pages/fashioneer/profile/componen
 import FashioneerProfileActionsSection from 'src/pages/fashioneer/profile/components/FashioneerProfileActionsSection.vue';
 import FashioneerProfileMeasurementsSection from 'src/pages/fashioneer/profile/components/FashioneerProfileMeasurementsSection.vue';
 import FashioneerProfilePortfolioSection from 'src/pages/fashioneer/profile/components/FashioneerProfilePortfolioSection.vue';
+import FashioneerProfileDiscoverSection from 'src/pages/fashioneer/profile/components/FashioneerProfileDiscoverSection.vue';
 import FashioneerProfileFormSection from 'src/pages/fashioneer/profile/components/FashioneerProfileFormSection.vue';
 
 const showSettings = ref(false);
